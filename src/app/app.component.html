@@ -1,0 +1,17 @@
+<p>
+  <mat-toolbar>
+    <span>Crypto Checker</span>
+    <span class="example-spacer"></span>
+    <div class="right-toolbar">
+      <mat-form-field appearance="fill">
+        <mat-select (valueChange)="selectedValue($event)" [(ngModel)]="selectCurrency">
+          <mat-option value="INR">INR</mat-option>
+          <mat-option selected value="USD">USD</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- <button mat-raised-button>Basic</button> -->
+    </div>
+    
+  </mat-toolbar>
+</p>
+<router-outlet></router-outlet>

@@ -1,0 +1,67 @@
+.banner {
+    background-image:linear-gradient(to bottom,rgb(183,35,93), rgba(255, 255, 255,1)) ;
+    height: 50vh;
+    width: 100vw;
+
+
+    .header {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h2{
+            margin: 2rem;
+        }
+        h6{
+            font-size: 1.3rem;
+        }
+    }
+    .card{
+        border: 0;
+        background: transparent;
+        color: rgb(1, 1, 1);
+        padding: 10px;
+        margin: 40px;
+        width: 100px;
+        height: 200px;
+       
+        img{
+            width: 70px;
+            margin: 0 auto;
+        }
+        h5{
+            font-weight: 500;
+            margin: 0 auto;
+           
+            span{
+                margin: 0 auto;
+                font-size: 20px;
+            }
+        }
+        p{
+            font-weight: 700;
+          
+        }
+        
+    }
+
+}
+table {
+    width: 100%;
+}
+
+.main_table{
+    border-radius: 1rem;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    width: 25%;
+}
+
