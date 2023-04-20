@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,16 +14,20 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
-import {NgChartsModule} from 'ng2-charts';
-import { PipePipe } from './service/pipe.pipe'
+import {NgChartsModule,NgChartsConfiguration} from 'ng2-charts';
+import { PipePipe } from './service/pipe.pipe';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CoinListComponent,
     PipePipe,
+   
   
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -39,10 +42,11 @@ import { PipePipe } from './service/pipe.pipe'
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    NgChartsModule
-
+    NgChartsModule,
+    CommonModule,
   ],
-  providers: [],
+  providers: [{ provide: NgChartsConfiguration, useValue: { generateColors: false }}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

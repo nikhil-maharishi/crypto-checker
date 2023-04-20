@@ -15,7 +15,12 @@
             </div>
         </div>
         <div class="col-md-8">
-            <canvas style="width: 60rem;" baseChart attr.data="{{lineChartData}}" attr.options="{{lineChartOption}}" attr.type="{{lineChartType}}"></canvas>
+            <div class="chart">
+                <canvas baseChart width="60rem" [data]="lineChartData" [options]="lineChartOption"
+                    [type]="lineChartType">
+                </canvas>
+            </div>
+
             <div class="d-flex justify-content-around">
                 <button (click)="getGraphData(1)" class="btn btn-custom">24 hours</button>
                 <button (click)="getGraphData(30)" class="btn btn-custom">30 days</button>

@@ -5,7 +5,7 @@
             <h6>check all the crypto currencies latest update</h6>
         </div>
         <div class="subheader">
-            <marquee behavior="scroll" onmouseover="stop()" onmouseout="start()" direction="left">
+            <marquee behavior="scroll" scrollamount="20" onmouseover="stop()" onmouseout="start()" direction="left">
                 <div class="row">
                     <ng-container *ngFor="let row of bannerData">
                         <div class="col-1">
@@ -40,9 +40,9 @@
         <table mat-table [dataSource]="dataSource" matSort>
       
           <!-- symbol Column -->
-          <ng-container matColumnDef="symbol">
+          <ng-container class="first" matColumnDef="symbol">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Coin </th>
-            <td mat-cell *matCellDef="let row">
+            <td class="first" mat-cell *matCellDef="let row">
                 <img [src]="row.image" width="40px" alt="">
                 <span class="mx-2">{{row.symbol | uppercase}} </span>
             </td>

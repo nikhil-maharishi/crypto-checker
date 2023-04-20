@@ -10,6 +10,11 @@
   }
   p{
     margin: 0px;
+    a{
+      list-style-type: none;
+      color: white;
+      text-decoration: none;
+    }
   }
  .right-toolbar{
   display: flex;
